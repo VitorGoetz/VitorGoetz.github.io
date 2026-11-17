@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.sortfilme.app",
+      "sha256_cert_fingerprints": [
+        "B2:D3:FD:85:4B:20:35:C7:D5:A7:5A:4A:9F:D8:C4:A4:A1:DD:B6:3E:F1:06:22:89:78:3D:8A:6B:AF:A4:D2:EE",
+        "31:08:BE:0D:67:54:17:19:B2:EB:6D:BE:64:EA:B8:62:DC:15:57:09:F0:07:0B:93:E9:89:BD:B7:B3:94:98:58"
+      ]
+    }
+  }
+]
