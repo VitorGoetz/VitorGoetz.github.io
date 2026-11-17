@@ -3,97 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SortFilme · Excluir conta e dados · Delete account and data</title>
-<link rel="icon" href="icone.png">
+<title>SortFilme · Excluir conta · Delete account · Eliminar cuenta</title>
+<meta name="description" content="SortFilme: sorteie um filme ou série. Português · English · Español.">
+<link rel="icon" href="/icone.png">
+<link rel="alternate" hreflang="pt-BR" href="https://sortfilme.com.br/pt/excluir-conta.html">
+<link rel="alternate" hreflang="en" href="https://sortfilme.com.br/en/delete-account.html">
+<link rel="alternate" hreflang="es" href="https://sortfilme.com.br/es/eliminar-cuenta.html">
+<link rel="alternate" hreflang="x-default" href="https://sortfilme.com.br/excluir-conta.html">
 <style>
   :root { --bg:#0E0B14; --card:#1B1520; --text:#FAF7F8; --muted:#A79A9E; --red:#E31B0C; --gold:#FCD16F; }
   * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
-  h1 { font-size:28px; margin:0 0 4px; } h1 em { color:var(--red); }
-  h2 { font-size:20px; margin:32px 0 8px; color:var(--gold); }
-  h3 { font-size:16px; margin:20px 0 4px; }
-  p, li { color:#E6DEE0; } small, .muted { color:var(--muted); }
-  nav { display:flex; gap:8px; margin:16px 0 8px; flex-wrap:wrap; }
-  nav a { color:var(--text); text-decoration:none; border:1px solid #3A262A; border-radius:20px; padding:6px 14px; }
-  section { background:var(--card); border:1px solid #2A2026; border-radius:18px; padding:8px 20px 20px; margin-top:20px; }
-  a { color:var(--gold); }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+         background:radial-gradient(circle at 30% 20%, #3A0F12, var(--bg) 60%); color:var(--text);
+         font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:560px; padding:40px 16px; text-align:center; }
+  img { width:120px; height:120px; border-radius:28px; }
+  h1 { font-size:44px; margin:16px 0 4px; letter-spacing:-0.5px; } h1 em { color:var(--red); }
+  p { color:#D9CFD2; margin:8px 0; } .gold { color:var(--gold); font-weight:700; }
+  .links { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:28px; }
+  a.btn { color:var(--text); text-decoration:none; border:1px solid #3A262A; background:var(--card);
+          border-radius:24px; padding:10px 18px; }
+  a.btn:hover, a.btn.main { border-color:var(--red); }
+  .langs { margin-top:20px; font-size:14px; } .langs a { color:var(--muted); margin:0 6px; }
+  footer { margin-top:40px; color:var(--muted); font-size:13px; }
 </style>
+<script>
+(function () {
+  var map = {"pt": "/pt/excluir-conta.html", "en": "/en/delete-account.html", "es": "/es/eliminar-cuenta.html"};
+  var h = (location.hash || "").replace("#", "");
+  var nav = (navigator.languages && navigator.languages[0]) || navigator.language || "pt";
+  var lang = map[h] ? h : (map[nav.slice(0, 2).toLowerCase()] ? nav.slice(0, 2).toLowerCase() : "pt");
+  location.replace(map[lang]);
+})();
+</script>
 </head>
 <body>
 <main>
+  <img src="/icone.png" alt="">
   <h1>Sort<em>Filme</em></h1>
-  <small>App SortFilme · FG Digital Products</small>
-  <nav><a href="#pt">Português</a><a href="#en">English</a><a href="#es">Español</a></nav>
-
-  <!-- ===================================================== PT -->
-  <section id="pt">
-    <h2>Excluir sua conta e seus dados</h2>
-    <p>A conta do SortFilme só existe se você entrou com o Google para salvar as listas na nuvem. Sem login, não há conta nem dados seus em nossos servidores.</p>
-
-    <h3>Pelo app (na hora)</h3>
-    <ol>
-      <li>Abra o SortFilme e toque na aba <b>Perfil</b>.</li>
-      <li>Na seção <b>Conta</b> (onde aparece o seu e-mail), toque em <b>Excluir conta</b>.</li>
-      <li>Confirme em <b>Excluir</b>.</li>
-    </ol>
-
-    <h3>Sem o app</h3>
-    <p>Envie um pedido pelo <b>e-mail de contato do desenvolvedor</b> que aparece na <a href="https://play.google.com/store/apps/details?id=com.sortfilme.app">página do SortFilme no Google Play</a> (seção “Suporte do app”), com o assunto “Excluir conta” e escrito a partir do <b>mesmo e-mail da conta Google</b> usada no app. A exclusão é feita em até 30 dias e você recebe a confirmação por e-mail.</p>
-
-    <h3>O que é apagado</h3>
-    <ul>
-      <li>A conta (e-mail, nome, link da foto do perfil e identificador da conta Google).</li>
-      <li>Todas as listas salvas na conta (“Quero ver” e “Já assisti”), com as suas notas e comentários.</li>
-    </ul>
-    <p>Tudo é apagado de forma definitiva; não guardamos cópia. Ao excluir pelo app, as listas também são apagadas do seu celular. A compra do Premium é do Google Play e continua vinculada à sua conta Google. Relatórios técnicos de erro não contêm dados da conta e são apagados em 90 dias.</p>
-  </section>
-
-  <!-- ===================================================== EN -->
-  <section id="en">
-    <h2>Delete your account and data</h2>
-    <p>A SortFilme account only exists if you signed in with Google to save your lists to the cloud. Without signing in, there is no account or personal data on our servers.</p>
-
-    <h3>In the app (immediately)</h3>
-    <ol>
-      <li>Open SortFilme and tap the <b>Profile</b> tab.</li>
-      <li>In the <b>Account</b> section (where your e-mail is shown), tap <b>Delete account</b>.</li>
-      <li>Confirm with <b>Delete</b>.</li>
-    </ol>
-
-    <h3>Without the app</h3>
-    <p>Send a request to the <b>developer contact e-mail</b> shown on the <a href="https://play.google.com/store/apps/details?id=com.sortfilme.app">SortFilme page on Google Play</a> (“App support” section), with the subject “Delete account”, from the <b>same e-mail as the Google account</b> used in the app. Deletion is completed within 30 days and you will receive a confirmation by e-mail.</p>
-
-    <h3>What is deleted</h3>
-    <ul>
-      <li>The account (e-mail, name, profile photo link and Google account identifier).</li>
-      <li>All lists saved in the account (“To watch” and “Watched”), including your ratings and comments.</li>
-    </ul>
-    <p>Everything is permanently deleted; we keep no copy. When you delete it in the app, the lists are also erased from your phone. The Premium purchase belongs to Google Play and stays linked to your Google account. Technical error reports contain no account data and are deleted after 90 days.</p>
-  </section>
-
-  <!-- ===================================================== ES -->
-  <section id="es">
-    <h2>Eliminar tu cuenta y tus datos</h2>
-    <p>La cuenta de SortFilme solo existe si iniciaste sesión con Google para guardar las listas en la nube. Sin iniciar sesión, no hay cuenta ni datos tuyos en nuestros servidores.</p>
-
-    <h3>En la app (al instante)</h3>
-    <ol>
-      <li>Abre SortFilme y toca la pestaña <b>Perfil</b>.</li>
-      <li>En la sección <b>Cuenta</b> (donde aparece tu e-mail), toca <b>Eliminar cuenta</b>.</li>
-      <li>Confirma con <b>Eliminar</b>.</li>
-    </ol>
-
-    <h3>Sin la app</h3>
-    <p>Envía una solicitud al <b>e-mail de contacto del desarrollador</b> que aparece en la <a href="https://play.google.com/store/apps/details?id=com.sortfilme.app">página de SortFilme en Google Play</a> (sección “Asistencia de la app”), con el asunto “Eliminar cuenta”, desde el <b>mismo e-mail de la cuenta de Google</b> usada en la app. La eliminación se completa en un plazo de 30 días y recibirás la confirmación por e-mail.</p>
-
-    <h3>Qué se elimina</h3>
-    <ul>
-      <li>La cuenta (e-mail, nombre, enlace de la foto de perfil e identificador de la cuenta de Google).</li>
-      <li>Todas las listas guardadas en la cuenta (“Por ver” y “Vistas”), con tus notas y comentarios.</li>
-    </ul>
-    <p>Todo se borra de forma definitiva; no guardamos copia. Al eliminarla desde la app, las listas también se borran de tu teléfono. La compra del Premium es de Google Play y sigue vinculada a tu cuenta de Google. Los informes técnicos de errores no contienen datos de la cuenta y se borran a los 90 días.</p>
-  </section>
+  <p>Excluir conta · Delete account · Eliminar cuenta</p>
+  <div class="links">
+    <a class="btn" href="/pt/excluir-conta.html" hreflang="pt-BR">Português</a>
+    <a class="btn" href="/en/delete-account.html" hreflang="en">English</a>
+    <a class="btn" href="/es/eliminar-cuenta.html" hreflang="es">Español</a>
+  </div>
 </main>
 </body>
 </html>

@@ -3,142 +3,50 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SortFilme · Política de Privacidade</title>
+<title>SortFilme · Política de Privacidade · Privacy Policy · Política de Privacidad</title>
+<meta name="description" content="SortFilme: sorteie um filme ou série. Português · English · Español.">
+<link rel="icon" href="/icone.png">
+<link rel="alternate" hreflang="pt-BR" href="https://sortfilme.com.br/pt/privacidade.html">
+<link rel="alternate" hreflang="en" href="https://sortfilme.com.br/en/privacy.html">
+<link rel="alternate" hreflang="es" href="https://sortfilme.com.br/es/privacidad.html">
+<link rel="alternate" hreflang="x-default" href="https://sortfilme.com.br/privacidade.html">
 <style>
   :root { --bg:#0E0B14; --card:#1B1520; --text:#FAF7F8; --muted:#A79A9E; --red:#E31B0C; --gold:#FCD16F; }
   * { box-sizing: border-box; }
-  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
-  main { max-width:760px; margin:0 auto; padding:32px 16px 64px; }
-  h1 { font-size:28px; margin:0 0 4px; } h1 em { color:var(--red); }
-  h2 { font-size:20px; margin:32px 0 8px; color:var(--gold); }
-  h3 { font-size:16px; margin:20px 0 4px; }
-  p, li { color:#E6DEE0; } small, .muted { color:var(--muted); }
-  nav { display:flex; gap:8px; margin:16px 0 8px; flex-wrap:wrap; }
-  nav a { color:var(--text); text-decoration:none; border:1px solid #3A262A; border-radius:20px; padding:6px 14px; }
-  section { background:var(--card); border:1px solid #2A2026; border-radius:18px; padding:8px 20px 20px; margin-top:20px; }
-  a { color:var(--gold); }
+  body { margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center;
+         background:radial-gradient(circle at 30% 20%, #3A0F12, var(--bg) 60%); color:var(--text);
+         font:16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width:560px; padding:40px 16px; text-align:center; }
+  img { width:120px; height:120px; border-radius:28px; }
+  h1 { font-size:44px; margin:16px 0 4px; letter-spacing:-0.5px; } h1 em { color:var(--red); }
+  p { color:#D9CFD2; margin:8px 0; } .gold { color:var(--gold); font-weight:700; }
+  .links { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:28px; }
+  a.btn { color:var(--text); text-decoration:none; border:1px solid #3A262A; background:var(--card);
+          border-radius:24px; padding:10px 18px; }
+  a.btn:hover, a.btn.main { border-color:var(--red); }
+  .langs { margin-top:20px; font-size:14px; } .langs a { color:var(--muted); margin:0 6px; }
+  footer { margin-top:40px; color:var(--muted); font-size:13px; }
 </style>
+<script>
+(function () {
+  var map = {"pt": "/pt/privacidade.html", "en": "/en/privacy.html", "es": "/es/privacidad.html"};
+  var h = (location.hash || "").replace("#", "");
+  var nav = (navigator.languages && navigator.languages[0]) || navigator.language || "pt";
+  var lang = map[h] ? h : (map[nav.slice(0, 2).toLowerCase()] ? nav.slice(0, 2).toLowerCase() : "pt");
+  location.replace(map[lang]);
+})();
+</script>
 </head>
 <body>
 <main>
+  <img src="/icone.png" alt="">
   <h1>Sort<em>Filme</em></h1>
-  <small>Atualizada em 16/11/2026 · Updated on 2026-11-16 · Actualizada el 16/11/2026</small>
-  <nav><a href="#pt">Português</a><a href="#en">English</a><a href="#es">Español</a></nav>
-
-  <!-- ===================================================== PT -->
-  <section id="pt">
-    <h2>Política de Privacidade</h2>
-    <p>O SortFilme é um app que sorteia filmes e séries. Usar o app <b>não exige cadastro nem login</b>. O login com a conta Google é <b>opcional</b> e serve só para salvar as listas na sua conta. Esta política explica quais dados são tratados ao usar o app.</p>
-
-    <h3>1. Dados guardados no seu celular</h3>
-    <p>Suas listas “Quero ver” e “Já assisti”, as notas e os comentários que você escrever sobre os títulos (Premium), os filtros e as preferências ficam salvos no seu aparelho. Sem login, as listas <b>não são enviadas para nenhum servidor nosso</b>; elas podem ser copiadas pelo backup automático do Google do seu celular, conforme as configurações do Android. Desinstalar o app apaga os dados do aparelho.</p>
-
-    <h3>1.1. Conta Google (opcional)</h3>
-    <p>Se você tocar em “Entrar com Google”, recebemos do Google o seu <b>endereço de e-mail</b>, o <b>nome</b> e o <b>link da foto do perfil</b> da conta Google e um <b>identificador da conta</b>. O nome e a foto aparecem só para você, no seu Perfil dentro do app; o e-mail e o identificador servem para guardar as suas listas na sua conta. Com isso, criamos sua conta no nosso servidor (Supabase) e guardamos nela <b>suas listas</b> (títulos, se já assistiu, a ordem, as suas notas e comentários e as datas em que incluiu ou alterou), para elas voltarem quando trocar de celular ou reinstalar o app. Não recebemos sua senha nem outros dados da conta Google. Esses dados são usados só para isso: não são vendidos, compartilhados com terceiros nem usados para anúncios. A comunicação é criptografada (HTTPS) e cada conta só acessa as próprias listas.</p>
-    <p><b>Excluir a conta:</b> no app, na aba “Perfil”, toque em “Excluir conta”. A conta e todas as listas salvas nela são apagadas na hora, de forma definitiva. Também é possível pedir a exclusão sem o app: <a href="excluir-conta.html#pt">como excluir sua conta e seus dados</a>. Sair da conta (“Sair”) remove as listas deste aparelho, mas não apaga os dados da conta: eles voltam quando você entrar de novo.</p>
-
-    <h3>2. Catálogo de filmes e séries</h3>
-    <p>Para sortear, o app consulta o nosso catálogo (hospedado no Supabase). A consulta envia só os filtros escolhidos (tipo, gênero, ano, nota e idioma). Como em qualquer acesso à internet, o servidor recebe tecnicamente o endereço IP, que não usamos para identificar você.</p>
-    <p>Se o app apresentar um erro, ele envia ao mesmo servidor um <b>relatório técnico</b>: versão do app e do Android, modelo do aparelho, idioma e a descrição do erro. O relatório não contém nome, e-mail, conta, localização nem identificador do aparelho, e serve só para corrigir problemas. Os relatórios são apagados depois de 90 dias.</p>
-
-    <h3>3. Anúncios (Google AdMob)</h3>
-    <p>A versão gratuita mostra anúncios do Google AdMob. O SDK do Google pode coletar o <b>ID de publicidade</b> do aparelho, endereço IP (localização aproximada), informações do aparelho e de interação com os anúncios, para exibir, medir e evitar fraude em anúncios. Na primeira abertura, quando a lei exige (por exemplo, na Europa), o app mostra o aviso de consentimento do Google, e você pode mudar a escolha em “Privacidade dos anúncios”. Você também pode redefinir ou desativar o ID de publicidade nas configurações do Android. Saiba mais: <a href="https://policies.google.com/technologies/partner-sites">Como o Google usa dados de apps parceiros</a>.</p>
-
-    <h3>4. Compra do Premium (Google Play)</h3>
-    <p>A compra do Premium é feita e processada pelo Google Play. Não recebemos dados de pagamento. O app só consulta o Google Play para saber se a sua conta já comprou o Premium. Para o Premium valer na sua conta do SortFilme, a compra leva um código embaralhado da conta (sem e-mail ou nome); por isso é preciso entrar com Google para comprar ou usar o Premium.</p>
-
-    <h3>5. Vídeo recompensado</h3>
-    <p>Ao assistir um vídeo para liberar as listas por 1 hora, vale o mesmo descrito no item 3 (anúncios do Google AdMob).</p>
-
-    <h3>6. Crianças</h3>
-    <p>O app não é direcionado a crianças menores de 13 anos e não coleta dados de crianças de forma intencional.</p>
-
-    <h3>7. Conteúdo de terceiros</h3>
-    <p>Sinopses e imagens vêm de fontes de licença livre (Wikipédia, Wikidata, Wikimedia Commons e TVmaze), com crédito no app. Os links “Ler mais” abrem esses sites, que têm políticas próprias.</p>
-
-    <h3>8. Seus direitos (LGPD)</h3>
-    <p>Sem login, não mantemos dados pessoais seus em nossos servidores. Com login, você pode ver suas listas no app e excluir a conta e todos os dados a qualquer momento (item 1.1). Dúvidas ou pedidos sobre seus dados podem ser enviados pelo contato do desenvolvedor na página do SortFilme no Google Play.</p>
-
-    <h3>9. Alterações</h3>
-    <p>Esta política pode ser atualizada. A data no topo indica a versão atual.</p>
-    <p class="muted">Desenvolvido por FG Digital Products · 2026</p>
-  </section>
-
-  <!-- ===================================================== EN -->
-  <section id="en">
-    <h2>Privacy Policy</h2>
-    <p>SortFilme is an app that randomly picks movies and TV shows. Using the app <b>does not require sign-up or login</b>. Signing in with your Google account is <b>optional</b> and is only used to save your lists to your account. This policy explains which data is processed when you use the app.</p>
-
-    <h3>1. Data stored on your phone</h3>
-    <p>Your “To watch” and “Watched” lists, the ratings and comments you write about titles (Premium), filters and preferences are saved on your device. Without signing in, the lists are <b>not sent to any of our servers</b>; they may be copied by your phone's Google automatic backup, according to your Android settings. Uninstalling the app deletes the data on the device.</p>
-
-    <h3>1.1. Google account (optional)</h3>
-    <p>If you tap “Sign in with Google”, we receive your <b>e-mail address</b>, the <b>name</b> and the <b>profile photo link</b> of your Google account and an <b>account identifier</b> from Google. The name and photo are shown only to you, in your Profile inside the app; the e-mail and identifier are used to keep your lists in your account. We use them to create your account on our server (Supabase) and store <b>your lists</b> in it (titles, whether you watched them, their order, your ratings and comments and the dates you added or changed them), so they come back when you change phones or reinstall the app. We do not receive your password or any other Google account data. This data is used only for this purpose: it is not sold, shared with third parties or used for ads. Communication is encrypted (HTTPS) and each account can only access its own lists.</p>
-    <p><b>Deleting your account:</b> in the app, in the “Profile” tab, tap “Delete account”. The account and all lists saved in it are permanently deleted right away. You can also request deletion without the app: <a href="excluir-conta.html#en">how to delete your account and data</a>. Signing out removes the lists from this device but does not delete the account data: they come back when you sign in again.</p>
-
-    <h3>2. Movie and TV catalog</h3>
-    <p>To pick a title, the app queries our catalog (hosted on Supabase). The request only contains the chosen filters (type, genre, year, rating and language). As with any internet request, the server technically receives your IP address, which we do not use to identify you.</p>
-    <p>If the app hits an error, it sends a <b>technical report</b> to the same server: app and Android version, device model, language and the error description. The report contains no name, e-mail, account, location or device identifier, and is used only to fix problems. Reports are deleted after 90 days.</p>
-
-    <h3>3. Ads (Google AdMob)</h3>
-    <p>The free version shows ads from Google AdMob. Google's SDK may collect the device <b>advertising ID</b>, IP address (approximate location), device information and ad interactions to serve, measure and prevent fraud in ads. On first launch, where required by law (e.g. in Europe), the app shows Google's consent message, and you can change your choice under “Ad privacy”. You can also reset or disable the advertising ID in Android settings. Learn more: <a href="https://policies.google.com/technologies/partner-sites">How Google uses data from partner apps</a>.</p>
-
-    <h3>4. Premium purchase (Google Play)</h3>
-    <p>The Premium purchase is made and processed by Google Play. We do not receive payment data. The app only checks with Google Play whether your account has bought Premium. So that Premium works on your SortFilme account, the purchase carries a scrambled account code (no e-mail or name); that is why you need to sign in with Google to buy or use Premium.</p>
-
-    <h3>5. Rewarded video</h3>
-    <p>When you watch a video to unlock the lists for 1 hour, item 3 (Google AdMob ads) applies.</p>
-
-    <h3>6. Children</h3>
-    <p>The app is not directed to children under 13 and does not knowingly collect data from children.</p>
-
-    <h3>7. Third-party content</h3>
-    <p>Synopses and images come from freely licensed sources (Wikipedia, Wikidata, Wikimedia Commons and TVmaze), credited in the app. “Read more” links open those websites, which have their own policies.</p>
-
-    <h3>8. Your rights</h3>
-    <p>Without signing in, we do not keep your personal data on our servers. If you sign in, you can see your lists in the app and delete the account and all its data at any time (item 1.1). Questions or requests about your data can be sent through the developer contact on the SortFilme page on Google Play.</p>
-
-    <h3>9. Changes</h3>
-    <p>This policy may be updated. The date at the top shows the current version.</p>
-  </section>
-
-  <!-- ===================================================== ES -->
-  <section id="es">
-    <h2>Política de Privacidad</h2>
-    <p>SortFilme es una app que sortea películas y series. Usar la app <b>no requiere registro ni inicio de sesión</b>. Iniciar sesión con tu cuenta de Google es <b>opcional</b> y solo sirve para guardar las listas en tu cuenta. Esta política explica qué datos se tratan al usar la app.</p>
-
-    <h3>1. Datos guardados en tu teléfono</h3>
-    <p>Tus listas “Por ver” y “Vistas”, las notas y los comentarios que escribas sobre los títulos (Premium), los filtros y las preferencias se guardan en tu dispositivo. Sin iniciar sesión, las listas <b>no se envían a ningún servidor nuestro</b>; pueden copiarse con la copia de seguridad automática de Google de tu teléfono, según los ajustes de Android. Desinstalar la app borra los datos del dispositivo.</p>
-
-    <h3>1.1. Cuenta de Google (opcional)</h3>
-    <p>Si tocas “Iniciar sesión con Google”, recibimos de Google tu <b>dirección de e-mail</b>, el <b>nombre</b> y el <b>enlace de la foto de perfil</b> de tu cuenta de Google y un <b>identificador de la cuenta</b>. El nombre y la foto solo los ves tú, en tu Perfil dentro de la app; el e-mail y el identificador sirven para guardar tus listas en tu cuenta. Con ellos creamos tu cuenta en nuestro servidor (Supabase) y guardamos en ella <b>tus listas</b> (títulos, si ya los viste, el orden, tus notas y comentarios y las fechas en que los agregaste o cambiaste), para que vuelvan si cambias de teléfono o reinstalas la app. No recibimos tu contraseña ni otros datos de la cuenta de Google. Estos datos se usan solo para esto: no se venden, no se comparten con terceros ni se usan para anuncios. La comunicación está cifrada (HTTPS) y cada cuenta solo accede a sus propias listas.</p>
-    <p><b>Eliminar la cuenta:</b> en la app, en la pestaña “Perfil”, toca “Eliminar cuenta”. La cuenta y todas las listas guardadas en ella se borran al instante y de forma definitiva. También puedes pedir la eliminación sin la app: <a href="excluir-conta.html#es">cómo eliminar tu cuenta y tus datos</a>. Cerrar sesión quita las listas de este dispositivo, pero no borra los datos de la cuenta: vuelven cuando inicies sesión de nuevo.</p>
-
-    <h3>2. Catálogo de películas y series</h3>
-    <p>Para sortear, la app consulta nuestro catálogo (alojado en Supabase). La consulta solo envía los filtros elegidos (tipo, género, año, nota e idioma). Como en cualquier acceso a internet, el servidor recibe técnicamente la dirección IP, que no usamos para identificarte.</p>
-    <p>Si la app presenta un error, envía al mismo servidor un <b>informe técnico</b>: versión de la app y de Android, modelo del dispositivo, idioma y la descripción del error. El informe no contiene nombre, e-mail, cuenta, ubicación ni identificador del dispositivo, y solo sirve para corregir problemas. Los informes se borran después de 90 días.</p>
-
-    <h3>3. Anuncios (Google AdMob)</h3>
-    <p>La versión gratuita muestra anuncios de Google AdMob. El SDK de Google puede recopilar el <b>ID de publicidad</b> del dispositivo, la dirección IP (ubicación aproximada), información del dispositivo y de interacción con los anuncios, para mostrar, medir y prevenir fraude en anuncios. En la primera apertura, cuando la ley lo exige (por ejemplo, en Europa), la app muestra el aviso de consentimiento de Google, y puedes cambiar tu elección en “Privacidad de los anuncios”. También puedes restablecer o desactivar el ID de publicidad en los ajustes de Android. Más información: <a href="https://policies.google.com/technologies/partner-sites">Cómo usa Google los datos de apps asociadas</a>.</p>
-
-    <h3>4. Compra del Premium (Google Play)</h3>
-    <p>La compra del Premium la realiza y procesa Google Play. No recibimos datos de pago. La app solo consulta a Google Play si tu cuenta ya compró el Premium. Para que el Premium valga en tu cuenta de SortFilme, la compra lleva un código cifrado de la cuenta (sin e-mail ni nombre); por eso hay que iniciar sesión con Google para comprar o usar el Premium.</p>
-
-    <h3>5. Video con recompensa</h3>
-    <p>Al ver un video para desbloquear las listas por 1 hora, se aplica lo descrito en el punto 3 (anuncios de Google AdMob).</p>
-
-    <h3>6. Niños</h3>
-    <p>La app no está dirigida a menores de 13 años y no recopila datos de niños de forma intencionada.</p>
-
-    <h3>7. Contenido de terceros</h3>
-    <p>Las sinopsis e imágenes provienen de fuentes de licencia libre (Wikipedia, Wikidata, Wikimedia Commons y TVmaze), con crédito en la app. Los enlaces “Leer más” abren esos sitios, que tienen sus propias políticas.</p>
-
-    <h3>8. Tus derechos</h3>
-    <p>Sin iniciar sesión, no guardamos tus datos personales en nuestros servidores. Si inicias sesión, puedes ver tus listas en la app y eliminar la cuenta y todos sus datos en cualquier momento (punto 1.1). Las dudas o solicitudes sobre tus datos pueden enviarse por el contacto del desarrollador en la página de SortFilme en Google Play.</p>
-
-    <h3>9. Cambios</h3>
-    <p>Esta política puede actualizarse. La fecha arriba indica la versión actual.</p>
-  </section>
+  <p>Política de Privacidade · Privacy Policy · Política de Privacidad</p>
+  <div class="links">
+    <a class="btn" href="/pt/privacidade.html" hreflang="pt-BR">Português</a>
+    <a class="btn" href="/en/privacy.html" hreflang="en">English</a>
+    <a class="btn" href="/es/privacidad.html" hreflang="es">Español</a>
+  </div>
 </main>
 </body>
 </html>

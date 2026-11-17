@@ -3,9 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SortFilme</title>
-<meta name="description" content="SortFilme: não sabe o que assistir? Sorteie um filme ou série com filtros em um toque.">
-<link rel="icon" href="icone.png">
+<title>SortFilme · Não sabe o que assistir? · Can&#x27;t decide what to watch? · ¿No sabes qué ver?</title>
+<meta name="description" content="SortFilme: sorteie um filme ou série. Português · English · Español.">
+<link rel="icon" href="/icone.png">
+<link rel="alternate" hreflang="pt-BR" href="https://sortfilme.com.br/pt/">
+<link rel="alternate" hreflang="en" href="https://sortfilme.com.br/en/">
+<link rel="alternate" hreflang="es" href="https://sortfilme.com.br/es/">
+<link rel="alternate" hreflang="x-default" href="https://sortfilme.com.br/">
 <style>
   :root { --bg:#0E0B14; --card:#1B1520; --text:#FAF7F8; --muted:#A79A9E; --red:#E31B0C; --gold:#FCD16F; }
   * { box-sizing: border-box; }
@@ -19,23 +23,30 @@
   .links { display:flex; gap:10px; justify-content:center; flex-wrap:wrap; margin-top:28px; }
   a.btn { color:var(--text); text-decoration:none; border:1px solid #3A262A; background:var(--card);
           border-radius:24px; padding:10px 18px; }
-  a.btn:hover { border-color:var(--red); }
+  a.btn:hover, a.btn.main { border-color:var(--red); }
+  .langs { margin-top:20px; font-size:14px; } .langs a { color:var(--muted); margin:0 6px; }
   footer { margin-top:40px; color:var(--muted); font-size:13px; }
 </style>
+<script>
+(function () {
+  var map = {"pt": "/pt/", "en": "/en/", "es": "/es/"};
+  var h = (location.hash || "").replace("#", "");
+  var nav = (navigator.languages && navigator.languages[0]) || navigator.language || "pt";
+  var lang = map[h] ? h : (map[nav.slice(0, 2).toLowerCase()] ? nav.slice(0, 2).toLowerCase() : "pt");
+  location.replace(map[lang]);
+})();
+</script>
 </head>
 <body>
 <main>
-  <img src="icone.png" alt="">
+  <img src="/icone.png" alt="">
   <h1>Sort<em>Filme</em></h1>
-  <p>Não sabe o que assistir? <span class="gold">Sorteie um filme ou série.</span></p>
-  <p>Can't decide what to watch? · ¿No sabes qué ver?</p>
+  <p>Não sabe o que assistir? · Can&#x27;t decide what to watch? · ¿No sabes qué ver?</p>
   <div class="links">
-    <a class="btn" href="privacidade.html#pt">Política de Privacidade</a>
-    <a class="btn" href="privacidade.html#en">Privacy Policy</a>
-    <a class="btn" href="privacidade.html#es">Política de Privacidad</a>
-    <a class="btn" href="excluir-conta.html">Excluir conta · Delete account · Eliminar cuenta</a>
+    <a class="btn" href="/pt/" hreflang="pt-BR">Português</a>
+    <a class="btn" href="/en/" hreflang="en">English</a>
+    <a class="btn" href="/es/" hreflang="es">Español</a>
   </div>
-  <footer>Desenvolvido por FG Digital Products · 2026</footer>
 </main>
 </body>
 </html>
