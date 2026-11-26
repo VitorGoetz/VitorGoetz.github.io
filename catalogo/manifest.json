@@ -1,0 +1,21 @@
+{
+ "version": "202611252351",
+ "count": 23752,
+ "files": {
+  "pt": {
+   "url": "pt.json.gz",
+   "size": 6921485,
+   "sha256": "8316bcfcc5518bfd2a1d15f597ac4f4300845652968c16cc137c1fabf55925d9"
+  },
+  "en": {
+   "url": "en.json.gz",
+   "size": 7669058,
+   "sha256": "a0f449c6c0395f6fb775e57b8dd8d526addcc55c89b1fd77aa2c238ed2caab62"
+  },
+  "es": {
+   "url": "es.json.gz",
+   "size": 7304547,
+   "sha256": "c34f7ff60c1cef62cc0e761e130082fe852dc28b3633cef9bce8b6d6a4844e33"
+  }
+ }
+}
