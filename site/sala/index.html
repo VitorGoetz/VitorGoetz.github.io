@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>SortFilme · Sala da Sessão Premiada</title>
+<link rel="icon" href="/icone.png">
+<!-- Página do QR code / link da sala da Sessão Premiada (app: Services/GroupLink.cs).
+     Com o app instalado e o link verificado (/.well-known/assetlinks.json), o Android nem abre esta página.
+     Senão: no Android tenta abrir o app (sortfilme://sala?c=...) e, sem o app, vai para a Play Store. -->
+<style>
+  body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #0E0B14; color: #F4EEF0;
+         min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+  main { max-width: 420px; padding: 32px 22px; }
+  img { width: 84px; height: 84px; border-radius: 20px; }
+  h1 { font-size: 22px; margin: 18px 0 6px; }
+  p { color: #A79A9E; line-height: 1.5; margin: 8px 0; }
+  .code { font-size: 40px; font-weight: 800; letter-spacing: 6px; color: #FCD16F; margin: 14px 0; }
+  a.btn { display: block; margin: 12px 0; padding: 15px 18px; border-radius: 28px; font-weight: 700; font-size: 17px;
+          text-decoration: none; }
+  .primary { background: #E31B0C; color: #fff; }
+  .ghost { border: 2px solid #E31B0C; color: #F4EEF0; }
+</style>
+</head>
+<body>
+<main>
+  <img src="/icone.png" alt="SortFilme">
+  <h1 id="title">Sala da Sessão Premiada</h1>
+  <p id="intro">Abra o SortFilme para entrar na sala.</p>
+  <div class="code" id="code"></div>
+  <a class="btn primary" id="open" href="#">Abrir no app</a>
+  <a class="btn ghost" id="get" href="https://play.google.com/store/apps/details?id=com.sortfilme.app">Baixar no Google Play</a>
+  <p id="hint">Sem o app? Instale e, perto de quem criou a sala, use o código acima em 🏆 Sessão › Entrar.</p>
+</main>
+<script>
+(function () {
+  var T = {
+    pt: { title: "Sala da Sessão Premiada", intro: "Abra o SortFilme para entrar na sala.", open: "Abrir no app",
+          get: "Baixar no Google Play", hint: "Sem o app? Instale e, perto de quem criou a sala, use o código acima em 🏆 Sessão › Entrar. A sala funciona por Bluetooth e Wi-Fi: deixe-os ligados.",
+          bad: "Link de sala inválido. Peça o código para quem criou a sala." },
+    en: { title: "Award Night room", intro: "Open SortFilme to join the room.", open: "Open in the app",
+          get: "Get it on Google Play", hint: "No app yet? Install it and, near the person who created the room, use the code above in 🏆 Awards › Join. The room works over Bluetooth and Wi-Fi: keep them on.",
+          bad: "Invalid room link. Ask the room creator for the code." },
+    es: { title: "Sala de la Sesión Premiada", intro: "Abre SortFilme para entrar a la sala.", open: "Abrir en la app",
+          get: "Descargar en Google Play", hint: "¿Sin la app? Instálala y, cerca de quien creó la sala, usa el código de arriba en 🏆 Sesión › Entrar. La sala funciona por Bluetooth y Wi-Fi: mantenlos encendidos.",
+          bad: "Enlace de sala no válido. Pide el código a quien creó la sala." }
+  };
+  var lang = (navigator.language || "pt").slice(0, 2).toLowerCase();
+  var t = T[lang] || T.pt;
+  document.documentElement.lang = lang === "pt" ? "pt-BR" : (T[lang] ? lang : "pt-BR");
+  ["title", "intro", "hint"].forEach(function (id) { document.getElementById(id).textContent = t[id]; });
+  document.getElementById("open").textContent = t.open;
+  document.getElementById("get").textContent = t.get;
+
+  // Código: só as letras e números que o app usa (ABC234). Nada da URL vai para a página sem passar por aqui.
+  var raw = (new URLSearchParams(location.search).get("c") || location.pathname.replace(/^\/sala\/?/, "") || "");
+  var code = raw.toUpperCase().replace(/[^A-Z0-9]/g, "");
+  if (!/^[A-HJ-NP-Z2-9]{6}$/.test(code)) {
+    document.getElementById("intro").textContent = t.bad;
+    document.getElementById("open").style.display = "none";
+    return;
+  }
+  document.getElementById("code").textContent = code.slice(0, 3) + " " + code.slice(3);
+
+  var play = "https://play.google.com/store/apps/details?id=com.sortfilme.app";
+  var android = /android/i.test(navigator.userAgent);
+  // Android (Chrome): abre o app pelo esquema sortfilme:// ou, sem o app, a Play Store.
+  var intent = "intent://sala?c=" + code + "#Intent;scheme=sortfilme;package=com.sortfilme.app;S.browser_fallback_url=" +
+               encodeURIComponent(play) + ";end";
+  var open = document.getElementById("open");
+  open.href = android ? intent : play;
+  if (android) location.replace(intent);
+})();
+</script>
+</body>
+</html>
