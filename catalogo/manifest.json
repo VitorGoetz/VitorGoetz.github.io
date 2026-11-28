@@ -1,23 +1,45 @@
 {
  "format": 2,
- "version": "202611260029",
+ "version": "202611280336",
  "count": 25245,
  "full": {
   "pt": {
    "url": "pt.json.br",
-   "size": 4611552,
-   "sha256": "e4f22f9ff8c5cad83f091f0bde881d640ccbcbdd0ef60589300396e03db8a1ed"
+   "size": 2979402,
+   "sha256": "6c90f88ea09da28097e90a459947556e5fc1160d56b75d37cf1c8db44760ac7e"
   },
   "en": {
    "url": "en.json.br",
-   "size": 5208815,
-   "sha256": "f67781044405ae865c0434938910d9c57a3372aaea9f1e458ff5d2bbfd3496fc"
+   "size": 5197932,
+   "sha256": "0a00d349a2f14149152ea98b7566faba16f822fc71cdb6f9fa65d4cd4b6a439c"
   },
   "es": {
    "url": "es.json.br",
-   "size": 4874317,
-   "sha256": "990f33f0037dddb0733d9fac20a0221a61c904cb9dc3ad4a4bbd4a165c8cf117"
+   "size": 3661294,
+   "sha256": "24ccdcbc07c738adea602148ae9f654560df0aeaf6abb362f8eb362549b16563"
   }
  },
- "updates": []
+ "updates": [
+  {
+   "from": "202611260029",
+   "to": "202611280336",
+   "files": {
+    "pt": {
+     "url": "pt-202611280336.json.br",
+     "size": 11034,
+     "sha256": "ff86c2f8b7913cb37efb6d683b9fbbb677a5ea1822d07faf65aa4a03b876123c"
+    },
+    "en": {
+     "url": "en-202611280336.json.br",
+     "size": 178,
+     "sha256": "f7916ad52898cfc8043a49414a52fb5febfd59ab37a7e6094bd1e66097dcfb28"
+    },
+    "es": {
+     "url": "es-202611280336.json.br",
+     "size": 7580,
+     "sha256": "d8497bfe037f64792f470ece98bf40440c43d95772914fe5f7bb5eb6799b8f30"
+    }
+   }
+  }
+ ]
 }
